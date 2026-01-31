@@ -1,5 +1,5 @@
-// CHANGE THIS: v1 -> v2
-const CACHE_NAME = 'med-leave-v3'; 
+// CHANGE THIS: v1 -> v4
+const CACHE_NAME = 'med-leave-v4'; 
 
 const ASSETS = [
     './',
