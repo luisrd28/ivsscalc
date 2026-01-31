@@ -9,8 +9,8 @@
     <title>Leave Calc</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icons/icon-192.png"> 
-    </head>
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
 <body>
 
     <div class="container">
@@ -43,12 +43,12 @@
             <div class="card card-result">
                 <div class="result-group">
                     <span class="label">Last Day of Leave</span>
-                    <span class="value" id="endDate">--</span>
+                    <span class="value result-leave" id="endDate">--</span>
                 </div>
                 <div class="divider"></div>
-                <div class="result-group highlight">
+                <div class="result-group">
                     <span class="label">Return to Work</span>
-                    <span class="value" id="returnDate">--</span>
+                    <span class="value result-return" id="returnDate">--</span>
                 </div>
             </div>
             
@@ -57,7 +57,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js');
         }
