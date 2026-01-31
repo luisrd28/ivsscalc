@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Leave Calc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png"> 
+    </head>
+<body>
 
+    <div class="container">
+        <header class="header">
+            <h1>Leave Validator</h1>
+            <p id="current-date-display">Jan 30, 2026</p>
+        </header>
+
+        <div class="bento-grid">
+            
+            <div class="card card-start">
+                <label>Start Date</label>
+                <input type="date" id="startDate" required>
+                <div class="date-display" id="startDateDisplay">Today</div>
+            </div>
+
+            <div class="card card-duration">
+                <label>Duration (Days)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="duration" placeholder="0" inputmode="numeric">
+                </div>
+                <div class="pills">
+                    <button class="pill" onclick="addDays(3)">+3</button>
+                    <button class="pill" onclick="addDays(7)">+7</button>
+                    <button class="pill" onclick="addDays(14)">+14</button>
+                    <button class="pill" onclick="addDays(21)">+21</button>
+                </div>
+            </div>
+
+            <div class="card card-result">
+                <div class="result-group">
+                    <span class="label">Last Day of Leave</span>
+                    <span class="value" id="endDate">--</span>
+                </div>
+                <div class="divider"></div>
+                <div class="result-group highlight">
+                    <span class="label">Return to Work</span>
+                    <span class="value" id="returnDate">--</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
